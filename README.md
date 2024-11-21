@@ -1,1 +1,2 @@
 # Sentimental-Analysis-over-a-text-file
+Sentiment analysis is a technique used to determine the emotional tone behind a body of text. It classifies text as positive, negative, or neutral, helping businesses understand customer opinions and improve their products or services. This process often involves natural language processing (NLP) and machine learning to analyze large volumes of unstructured data, such as social media comments, reviews, and customer feedback. 
