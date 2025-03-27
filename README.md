@@ -1,89 +1,86 @@
 # Text Emotion Analysis
-This repository contains a Python script for performing emotion analysis on a text file. The script processes textual data to identify emotions and visualize the results using a bar chart.
 
-## How It Works
+## 📌 Overview
+This project performs **emotion analysis** on a given text file, identifying and visualizing emotions present in the text. The script processes textual data, detects emotions using predefined word mappings, and presents the results in a bar chart.
 
-1. **Input**: 
-   - Reads a text file (`read.txt`) containing the input text for analysis.
-   - Reads an emotion mapping file (`emotions.txt`) containing word-to-emotion mappings.
+## 🚀 Features
+- Reads input text from a file.
+- Processes and cleans text (lowercasing, punctuation removal, tokenization).
+- Maps words to emotions using a predefined dictionary.
+- Counts and visualizes detected emotions.
+- Saves results as a bar chart.
 
-2. **Text Preprocessing**:
-   - Converts all text to lowercase.
-   - Removes punctuation.
-   - Tokenizes text into individual words.
-   - Removes stop words using a predefined list of common stop words.
+## 🛠️ Installation
+### Prerequisites
+- **Python 3.7+**
+- Required libraries:
+  ```bash
+  pip install matplotlib
+  ```
 
-3. **Emotion Detection**:
-   - Compares each word in the processed text against the `emotions.txt` file.
-   - Matches are used to build a list of emotions corresponding to the text.
-
-4. **Visualization**:
-   - Counts the frequency of each detected emotion.
-   - Displays a bar chart showing the distribution of emotions.
-   - Saves the bar chart as `graph.png`.
-
-## Requirements
-
-- Python 3.7+
-- Required Python Libraries: `matplotlib`
-
-Install the necessary dependencies using:
-```bash
-pip install matplotlib
+## 📂 Project Structure
+```
+📁 TextEmotionAnalysis
+│── 📄 main.py            # Main script for emotion analysis
+│── 📄 read.txt           # Input text file
+│── 📄 emotions.txt       # Word-to-emotion mapping
+│── 📄 graph.png          # Output visualization (generated)
 ```
 
-## Files in the Repository
+## 🔧 How It Works
+1. **Preprocessing:**
+   - Converts text to lowercase.
+   - Removes punctuation.
+   - Tokenizes words.
+2. **Emotion Detection:**
+   - Compares words with `emotions.txt`.
+   - Identifies and counts emotions.
+3. **Visualization:**
+   - Generates a bar chart.
+   - Saves output as `graph.png`.
 
-1. `main.py`: The main script for text emotion analysis.
-2. `read.txt`: Input text file to be analyzed.
-3. `emotions.txt`: File containing word-to-emotion mappings.
+## 🏃 Usage
+### 1️⃣ Prepare Input Files
+- **`read.txt`**: Add text for analysis.
+- **`emotions.txt`**: Define word-emotion mappings (`word:emotion`).
 
-## Usage
+### 2️⃣ Run the Script
+Execute the script using:
+```bash
+python main.py
+```
 
-1. **Prepare Input Files**:
-   - Place the text to be analyzed in `read.txt`.
-   - Ensure `emotions.txt` contains valid word-to-emotion mappings in the format:
-     ```
-     word:emotion
-     ```
+### 3️⃣ View Results
+- Console output shows detected emotions and their count.
+- The bar chart (`graph.png`) visualizes the emotion distribution.
 
-2. **Run the Script**:
-   Execute the script:
-   ```bash
-   python main.py
-   ```
-
-3. **View Results**:
-   - The script outputs the detected emotions and their frequencies to the console.
-   - A bar chart visualizing the emotion distribution is saved as `graph.png` and displayed.
-
-## Example
-
-### Sample Input (`read.txt`):
+## 📝 Example
+### **Sample Input (`read.txt`)**:
 ```
 I am so happy and excited to see you here! However, I feel a bit nervous about the results.
 ```
 
-### Sample Emotion Mapping (`emotions.txt`):
+### **Sample Mapping (`emotions.txt`)**:
 ```
 happy:joy
 excited:joy
 nervous:fear
 ```
 
-### Output:
+### **Output**:
 Console Output:
 ```
 ['joy', 'joy', 'fear']
 Counter({'joy': 2, 'fear': 1})
 ```
-
 Bar Chart:
-- A bar chart showing `joy` with a count of 2 and `fear` with a count of 1.
+- Shows `joy: 2`, `fear: 1`.
 
-## License
-This project is licensed under the MIT License.
+## 📜 License
+This project is licensed under the **MIT License**.
 
-## Acknowledgments
-Thanks to the creators of the emotion mapping dataset for providing a valuable resource for emotion analysis.
+## 🙌 Acknowledgments
+Special thanks to the creators of emotion mapping datasets for their contributions to NLP research.
 
+---
+💡 **Contributions Welcome!** Feel free to submit issues or feature requests. 🚀
